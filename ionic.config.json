@@ -1,0 +1,7 @@
+{
+  "name": "login-guard-productos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
