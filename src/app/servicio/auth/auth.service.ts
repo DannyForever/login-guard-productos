@@ -39,4 +39,12 @@ export class AuthService {
     })
   }
 
+  // Método para cerrar sesión
+  public cerrarSesion(){
+    if(this.usuarioLogeado){
+      this.usuarioLogeado = null;
+      this.accessToken = null;
+    }
+  }
+
 }
