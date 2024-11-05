@@ -1,4 +1,4 @@
-export interface CuerpoLogin{
+export interface CuerpoLogin {
     username: string
     password: string;
 }
