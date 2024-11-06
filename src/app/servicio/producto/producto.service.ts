@@ -37,7 +37,7 @@ export class ProductoService {
 
   public siguientesProductos(){
     this.saltar = this.saltar + this.cantidad;
-    const url_nueva = `${this.URL_PRODUCTOS}?limit=${this.cantidad}&skip=$(this.saltar)`;
+    const url_nueva = `${this.URL_PRODUCTOS}?limit=${this.cantidad}&skip=${this.saltar}`;
     this.http.get<ProductoRespuesta>(url_nueva, {
       headers: {
         'Authorization': "Bearer "+this.auth.accessToken,
@@ -58,7 +58,7 @@ export class ProductoService {
     else {
       this.saltar = this.saltar - this.cantidad;
     }
-    const url_nueva = `${this.URL_PRODUCTOS}?limit=${this.cantidad}&skip=$(this.saltar)`;
+    const url_nueva = `${this.URL_PRODUCTOS}?limit=${this.cantidad}&skip=${this.saltar}`;
     this.http.get<ProductoRespuesta>(url_nueva, {
       headers: {
         'Authorization': "Bearer "+this.auth.accessToken,
